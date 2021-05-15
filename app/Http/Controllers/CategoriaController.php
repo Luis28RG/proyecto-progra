@@ -13,8 +13,8 @@ class CategoriaController extends Controller
     }
     public function create(Request $request){
         $data = $request->validate([
-            'nombre' => 'required',
-            'descripcion' => 'nullable'
+            'nombre_categoria' => 'required',
+            'descripcion_categoria' => 'nullable'
         ]);
 
         Categoria::insert($data);
