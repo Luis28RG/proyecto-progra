@@ -16,8 +16,8 @@
             @foreach($data as $info)
                 <tr>
                     <td>{{$info->idcategoria}}</td>
-                    <td>{{$info->nombre}}</td>
-                    <td>{{$info->descripcion}}</td>
+                    <td>{{$info->nombre_categoria}}</td>
+                    <td>{{$info->descripcion_categoria}}</td>
                     <td>
                         <a href="{{route('categoria/eliminar',$info->idcategoria)}}" class="btn btn danger">Eliminar</a>
                     </td>

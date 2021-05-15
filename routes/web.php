@@ -22,6 +22,6 @@ Route::get('/categoria/registro',function () {
     return view('categoria.formulario');
 })->name('categoria/formulario');
 
-Route::get('/categoria/tabla', 'CategoriaController@index')->name('categoria/tabla');
-Route::post('/categoria/crear', 'CategoriaController@create')->name('categoria/create');
-Route::get('/categoria/eliminar/{id}', 'CategoriaController@eliminar')->name('categoria/eliminar');
+Route::get('/categoria/tabla', 'App\Http\Controllers\CategoriaController@index')->name('categoria/tabla');
+Route::post('/categoria/crear', 'App\Http\Controllers\CategoriaController@create')->name('categoria/create');
+Route::get('/categoria/eliminar/{id}', 'App\Http\Controllers\CategoriaController@eliminar')->name('categoria/eliminar');
