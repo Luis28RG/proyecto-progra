@@ -27,8 +27,8 @@
                     Producto
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="">Tabla</a>
-                    <a class="dropdown-item" href="">Registro</a>
+                    <a class="dropdown-item" href="{{route('producto/tabla')}}">Tabla</a>
+                    <a class="dropdown-item" href="{{route('producto/formulario')}}">Registro</a>
 
                 </div>
             </li>

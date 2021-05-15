@@ -34,3 +34,16 @@ Route::get('/marca/registro',function () {
 Route::get('/marca/tabla', 'App\Http\Controllers\MarcaController@index')->name('marca/tabla');
 Route::post('/marca/crear', 'App\Http\Controllers\MarcaController@create')->name('marca/create');
 Route::get('/marca/eliminar/{id}', 'App\Http\Controllers\MarcaController@eliminar')->name('marca/eliminar');
+
+// Rutas de producto
+Route::get('/producto/registro',function () {
+    return view('producto.formulario');
+})->name('producto/formulario');
+
+Route::get('/producto/tabla', 'App\Http\Controllers\ProductoController@index')->name('producto/tabla');
+Route::post('/producto/crear', 'App\Http\Controllers\ProductoController@create')->name('producto/create');
+Route::get('/producto/eliminar/{id}', 'App\Http\Controllers\ProductoController@eliminar')->name('producto/eliminar');
+
+//update
+Route::get('/categoria/edit/{id}', 'App\Http\Controllers\CategoriaController@edit')->name('categoria/edit');
+Route::patch('/categoria/update/{id}', 'App\Http\Controllers\CategoriaController@update')->name('categoria/update');

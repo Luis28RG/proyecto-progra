@@ -4,12 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Categoria extends Model
+class Producto extends Model
 {
-    protected $primaryKey = 'idcategoria';
-    protected $guarded = 'idcategoria';
+    protected $primaryKey = 'idproducto';
+    protected $guarded = 'idproducto';
     public $timestamps = false;
-    protected $table = 'categoria';
+    protected $table = 'producto';
     public $incrementing = true;
 
 }

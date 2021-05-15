@@ -2,7 +2,7 @@
 
 @section('contenido')
     <div class="container mt-5">
-        <h2>Tabla de Categoria</h2>
+        <h2>Tabla de Marca</h2>
         <table class="table">
             <thead class="thead-dark">
             <tr>
@@ -19,7 +19,7 @@
                     <td>{{$info->nombre_marca}}</td>
                     <td>{{$info->descripcion_marca}}</td>
                     <td>
-                        <a href="{{route('marca/eliminar',$info->idmarca)}}" class="btn btn danger">Eliminar</a>
+                        <a href="{{route('marca/eliminar',$info->idmarca)}}" class="btn btn-danger">Eliminar</a>
                     </td>
                 </tr>
             @endforeach

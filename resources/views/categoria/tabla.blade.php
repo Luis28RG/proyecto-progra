@@ -19,7 +19,8 @@
                     <td>{{$info->nombre_categoria}}</td>
                     <td>{{$info->descripcion_categoria}}</td>
                     <td>
-                        <a href="{{route('categoria/eliminar',$info->idcategoria)}}" class="btn btn danger">Eliminar</a>
+                        <a href="{{route('categoria/eliminar',$info->idcategoria)}}" class="btn btn-danger">Eliminar</a>
+                        <a href="{{route('categoria/edit', $info->idcategoria)}}" class="btn btn-warning">Editar</a>
                     </td>
                 </tr>
             @endforeach

@@ -21,10 +21,28 @@ class CategoriaController extends Controller
         $data = Categoria::all();
         return view('categoria.tabla', compact('data'));
 
+
+
     }
+    public function edit ($id){
+       $categoria=Categoria::find($id);
+       return view("categoria.edit" , compact("categoria"));
+    }
+
+    public function update(Request $request,$id){
+        $data = $request->validate([
+            'nombre_categoria' => 'required',
+            'descripcion_categoria' => 'nullable'
+        ]);
+        $categoria=Categoria::find($id);
+        $categoria->update($data);
+        $categoria->save();
+    }
+
     public function eliminar($id){
         Categoria::find($id)->delete();
         $data = Categoria::all();
         return view('categoria.tabla', compact('data'));
     }
 }
+
